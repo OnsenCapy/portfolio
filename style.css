@@ -1,0 +1,407 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto Slab", serif;
+    background-color: #000; 
+    color: #fff; 
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 10px 30px;
+    border-bottom: 1px solid #222;
+    position: relative;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    opacity: 0.8; /* Opacidade padrão */
+    transition: opacity 0.3s ease;
+}
+
+.menu-link:hover {
+    opacity: 1; 
+}
+
+.nav-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 1px;
+    vertical-align: middle; 
+}
+
+#pt-br {
+    background-image: url('assets/brazil-.png');
+    background-size: cover;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%; 
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    opacity: 0.9;
+}
+
+#en-us {
+    background-image: url('assets/united-states.png');
+    background-size: cover;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    opacity: 0.9;
+}
+
+.language-buttons button:hover {
+    transform: scale(1.1); 
+}
+
+
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    z-index: 1; 
+    margin: 0; 
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    height: 100%;
+}
+
+/*serve para botar uma imagem com transparencia atrás do conteúdo da página*/
+.hero::before {
+    content: "";
+    background-image: url('assets/topography.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.4; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+}
+
+.hero .content {
+    text-align: center;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    border-bottom: 2px solid #00ff7f; 
+    display: inline-block;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 200px;
+}
+
+strong {
+    color: #fff;
+    font-weight: bold;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+    margin: 0 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #00ff7f;
+}
+
+footer {
+    position: fixed;
+    left: 10px; 
+    bottom: 20px; 
+    display: flex;
+    gap: 10px; 
+}
+
+.footer-btn button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%; 
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.footer-btn button:hover {
+    transform: scale(1.1); 
+}
+
+
+#github {
+    background-image: url('assets/github-icon.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#linkedin {
+    background-image: url('assets/linkedin-icon.png');
+    background-size: cover;
+    background-position: center;
+}
+.content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.home-content {
+    max-width: 800px;
+    padding: 20px;
+    opacity: 1;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+#projects-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #111;
+    padding: 50px 0;
+    color: white;
+  }
+  
+  #projects-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background-color: white;
+    transform: translateX(-50%);
+  }
+  
+  .project {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0;
+    width: 80%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .project.left {
+    flex-direction: row-reverse;
+  }
+  
+  .project.right {
+    flex-direction: row;
+  }
+  
+  .project-content {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .project-content h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  
+  .project-content hr {
+    border: 0;
+    height: 2px;
+    background-color: white;
+    width: 50%;
+    margin: 0 auto;
+  }
+  
+  .project-content p {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .project-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .project-image img {
+    max-width: 80%;
+    opacity: 0.8;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .project:hover {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  
+  .project:hover img {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  
+  .curriculo-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #111;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,255,127,0.3);
+    color: #fff;
+    font-family: "Roboto Slab", serif;
+    line-height: 1.6;
+}
+
+.curriculo-container h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    border-bottom: 2px solid #00ff7f;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.curriculo-container .subtitle {
+    text-align: left;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #aaa;
+}
+
+.section {
+    margin-bottom: 25px;
+}
+
+.section h3 {
+    color: #00ff7f;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #00ff7f;
+    padding-bottom: 5px;
+}
+
+.section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.section ul li {
+    margin-bottom: 8px;
+}
+
+.section ul li a {
+    color: #00ff7f;
+    text-decoration: none;
+}
+
+.section ul li a:hover {
+    text-decoration: underline;
+}
+
+.download button {
+    display: block;
+    margin: 20px auto 0 auto;
+    padding: 12px 25px;
+    font-size: 1rem;
+    background-color: #00ff7f;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #000;
+    font-weight: bold;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.download button:hover {
+    transform: scale(1.05);
+    background-color: #00cc66;
+}
+
+.skill {
+  margin-bottom: 15px;
+}
+
+.skill span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.bar {
+  background-color: #333;
+  border-radius: 10px;
+  height: 15px;
+  width: 100%;
+}
+
+.bar div {
+  height: 100%;
+  background-color: #00ff7f;
+  border-radius: 10px;
+}
+

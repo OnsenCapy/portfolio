@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas Ruthes - Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+    <ul class="menu">
+        <li>
+            <a href="javascript:void(0);" class="menu-link" onclick="showContent('home')">
+                <img src="assets/coder.png" alt="Ícone Home" class="nav-icon">
+                <span class="nav-text" data-key="navName">Lucas Ruthes</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0);" class="menu-link" onclick="showContent('habilidades')">
+                <img src="assets/skills.png" alt="Ícone Habilidades" class="nav-icon">
+                <span class="nav-text" data-key="navSkills">Habilidades</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0);" class="menu-link" onclick="showContent('projects')">
+                <img src="assets/projects.png" alt="Ícone Projetos" class="nav-icon">
+                <span class="nav-text" data-key="navProjects">Projetos</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0);" class="menu-link" onclick="showContent('curriculo')">
+                <img src="assets/resume.png" alt="Ícone Currículo" class="nav-icon">
+                <span class="nav-text" data-key="navResume">Currículo</span>
+            </a>
+        </li>
+    </ul>
+
+    <!-- Botões de idioma -->
+    <div class="language-buttons">
+        <button class="lang-btn" id="pt-br"></button>
+        <button class="lang-btn" id="en-us"></button>
+    </div>
+</nav>
+
+<!-- Home -->
+<div id="home" class="content">
+    <section class="hero">
+        <div class="home-content">
+            <h1 data-key="homeTitle">Lucas Ruthes</h1>
+            <p data-key="homeDesc">
+                Olá, seja bem-vindo ao meu portfólio! Meu nome é Lucas Ruthes, e sou um 
+                <strong>desenvolvedor Full Stack Júnior</strong> com formação em 
+                <strong>Análise e Desenvolvimento de Sistemas</strong>. Sou apaixonado por tecnologia 
+                e sempre busco aprimorar minhas habilidades na área de programação. Navegue pelas seções 
+                para conhecer meus projetos, competências e experiências!
+            </p>
+            <footer>
+                <div class="footer-buttons">
+                    <a href="https://github.com/OnsenCapy" target="_blank" class="footer-btn">
+                        <button id="github"></button>
+                    </a>
+                    <a href="https://linkedin.com/in/lucasgrds" target="_blank" class="footer-btn">
+                        <button id="linkedin"></button>
+                    </a>
+                </div>
+            </footer>
+        </div>
+    </section>
+</div>
+
+<!-- Habilidades -->
+<div id="habilidades" class="content" style="display: none;">
+  <h2 data-key="skillsTitle">Habilidades</h2>
+  <div class="skill">
+    <span>HTML & CSS</span>
+    <div class="bar"><div style="width:80%"></div></div>
+  </div>
+  <div class="skill">
+    <span>JavaScript</span>
+    <div class="bar"><div style="width:50%"></div></div>
+  </div>
+  <div class="skill">
+    <span>C#</span>
+    <div class="bar"><div style="width:75%"></div></div>
+  </div>
+  <div class="will">
+    <span data-key="skillsWill">Vontade de trabalhar em sua empresa</span>
+    <div class="bar"><div style="width:100%"></div></div>
+  </div>
+</div>
+
+<!-- Projetos -->
+<section id="projects" class="content">
+  <div class="projects-line"></div>
+  <div class="projects-container">
+    <div id="projects-section">
+      <div class="project left">
+        <div class="project-content">
+          <h2 data-key="proj1Title">Cookie Clicker</h2>
+          <hr />
+          <p data-key="proj1Desc">Jogo incremental desenvolvido em C# com Unity, focado em mecânicas de clique e gerenciamento de recursos.</p>
+        </div>
+        <div class="project-image">
+          <img src="assets/NutClicker.jpg" alt="Cookie Clicker" />
+        </div>
+      </div>
+
+      <div class="project right">
+        <div class="project-content">
+          <h2 data-key="proj2Title">Space Invaders</h2>
+          <hr />
+          <p data-key="proj2Desc">Recriação do clássico Space Invaders com C# e Unity, incluindo lógica de inimigos e colisões.</p>
+        </div>
+        <div class="project-image">
+          <img src="assets/space-invaders.jpg" alt="Space Invaders" />
+        </div>
+      </div>
+
+      <div class="project left">
+        <div class="project-content">
+          <h2 data-key="proj3Title">Platformer Básico</h2>
+          <hr />
+          <p data-key="proj3Desc">Plataformer 2.5D desenvolvido em Unity, explorando movimentação de personagem, colisões e física.</p>
+        </div>
+        <div class="project-image">
+          <img src="assets/platformer.jpg" alt="Platformer Básico" />
+        </div>
+      </div>
+
+      <div class="project right">
+        <div class="project-content">
+          <h2 data-key="proj4Title">Space Station 14 – Goobstation Fork</h2>
+          <hr />
+          <p data-key="proj4Desc">Contribuições em um fork open-source do Space Station 14, incluindo implementação de funcionalidades e correções de bugs.</p>
+        </div>
+        <div class="project-image">
+          <img src="assets/ss14.gif" alt="Space Station 14" />
+        </div>
+      </div>
+
+      <div class="project left">
+        <div class="project-content">
+          <h2 data-key="proj5Title">Portfólio Interativo</h2>
+          <hr />
+          <p data-key="proj5Desc">Site pessoal desenvolvido em HTML, CSS e JavaScript, com navegação dinâmica e responsiva.</p>
+        </div>
+        <div class="project-image">
+          <img src="assets/portfolio.jpg" alt="Portfólio" />
+        </div>
+      </div>
+
+      <div class="project right">
+        <div class="project-content">
+          <h2 data-key="proj6Title">Site CRUD</h2>
+          <hr />
+          <p data-key="proj6Desc">Projeto de site CRUD em HTML, CSS, JavaScript e MySQL, com funcionalidades de criação, leitura, atualização e exclusão de dados.</p>
+        </div>
+        <div class="project-image">
+          <img src="assets/crud.gif" alt="Site CRUD" />
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Currículo -->
+<div id="curriculo" class="content" style="display: none;">
+  <div class="curriculo-container">
+    <h2 data-key="resumeName">Lucas Ruthes</h2>
+    <p class="subtitle" data-key="resumeSubtitle">Desenvolvedor Full Stack Júnior</p>
+
+    <!-- Contato -->
+    <div class="section contato">
+      <h3 data-key="resumeContact">Contato</h3>
+      <ul>
+        <li data-key="email">Email: lucasgrds2003@gmail.com</li>
+        <li data-key="phone">Telefone: +55 47 98400-2105</li>
+        <li data-key="linkedin">LinkedIn: <a href="https://linkedin.com/in/lucasgrds" target="_blank">linkedin.com/in/lucasgrds</a></li>
+        <li data-key="github">GitHub: <a href="https://github.com/OnsenCapy" target="_blank">github.com/OnsenCapy</a></li>
+      </ul>
+    </div>
+
+    <!-- Experiência -->
+    <div class="section experiencia">
+      <h3 data-key="resumeExperience">Experiência</h3>
+      <ul>
+        <li data-key="expDesc">
+          Desenvolvedor Júnior Freelancer – Ajudei em um projeto open-source, desenvolvimento e manutenção de funcionalidades, correção de bugs e trabalho com base de código complexa (C#, ECS). Além disso, criei vários projetos pessoais (C#, HTML, CSS, JavaScript).
+        </li>
+      </ul>
+    </div>
+
+    <!-- Educação -->
+    <div class="section educacao">
+      <h3 data-key="resumeEducation">Educação</h3>
+      <ul>
+        <li data-key="edu1">Ensino Médio – E.E.M. Gov. Celso Ramos (2017–2020)</li>
+        <li data-key="edu2">Análise e Desenvolvimento de Sistemas – Anhanguera (2023–2025, completo)</li>
+        <li data-key="edu3">Desenvolvimento WEB – Anhanguera (2025–2027, em andamento)</li>
+      </ul>
+    </div>
+
+    <!-- Projetos -->
+    <div class="section projetos">
+      <h3 data-key="resumeProjects">Projetos</h3>
+      <ul>
+        <li data-key="proj1">Cookie Clicker (C# / Unity)</li>
+        <li data-key="proj2">Space Invaders (C# / Unity)</li>
+        <li data-key="proj3">Platformer Básico (C# / Unity)</li>
+        <li data-key="proj4">Space Station 14 (Open-source, C# / RobustToolbox)</li>
+        <li data-key="proj5">Site CRUD (HTML, CSS, JavaScript, MySQL)</li>
+        <li data-key="proj6">Portfólio Interativo (HTML, CSS, JavaScript)</li>
+      </ul>
+    </div>
+
+    <!-- Habilidades -->
+    <div class="section habilidades">
+      <h3 data-key="resumeSkills">Habilidades Técnicas</h3>
+      <ul>
+        <li data-key="skill1">Linguagens: JavaScript, C#</li>
+        <li data-key="skill2">Front-End: HTML, CSS, React</li>
+        <li data-key="skill3">Back-End: Node.js, MySQL</li>
+        <li data-key="skill4">Ferramentas: Git, GitHub, Unity, MySQL Workbench</li>
+      </ul>
+    </div>
+
+    <!-- Idiomas -->
+    <div class="section idiomas">
+      <h3 data-key="resumeLanguages">Idiomas</h3>
+      <ul>
+        <li data-key="lang1">Português (Nativo)</li>
+        <li data-key="lang2">Inglês (Fluente)</li>
+        <li data-key="lang3">Japonês (Básico)</li>
+      </ul>
+    </div>
+
+    <!-- Download -->
+    <div class="section download">
+      <a href="files/curriculo.pdf" download="LucasRuthes-Curriculo.pdf">
+        <button data-key="resumeDownload">Baixar Currículo em PDF</button>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
